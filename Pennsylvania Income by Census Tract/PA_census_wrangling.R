@@ -3,7 +3,7 @@ library(tidycensus)
 library(RColorBrewer)
 library(tmap)
 
-census_api_key("8936f3beab8113abc6e9e9df6b82630cee84c904",
+census_api_key(Sys.getenv("key_census"),
                install=TRUE, overwrite = TRUE)
 
 PA_county.sp <- get_acs(geography = "county", 
